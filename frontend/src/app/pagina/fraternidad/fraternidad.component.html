@@ -1,0 +1,71 @@
+
+<body>
+    <div class="container">
+     <li><a class="waves-effect waves-light btn" routerLink="/api/ubicacion" >Agregar Ubicacion</a></li>
+    
+  <div [hidden]="!formulario">
+    <form (ngSubmit)="submit()">
+      <div class="input-field col s12"><input type="text" name="nombre" [(ngModel)]="frat.nombre">  <label>Nombre de la Fraternidad</label></div>
+      <div class="input-field col s12"><input type="text" name="institucion" [(ngModel)]="frat.institucion">  <label>Institucion</label></div>  
+      <div class="file-field input-field">
+          <div class="btn">
+            <span>File</span>
+            <input type="file" (change)="upload($event)">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+          </div>
+        </div>
+    
+      
+  
+      <div class="input-field col s12"> <input type="text" name="presidente"  [(ngModel)]="frat.presidente">  <label>Nombre del Presidente </label></div>
+       <div class="input-field col s12"> <input type="text" name="delegado"  [(ngModel)]="frat.delegado">  <label>Nombre del Delegado</label></div>
+        <div class="input-field col s12"><input type="number" name="cantidad" [(ngModel)]="frat.cantidad">  <label>Cantidad de Integrantes </label></div>
+
+       <div class="input-field col s12"><input type="text" name="danza" [(ngModel)]="frat.danza">  <label>Danza</label></div>
+        <div class="input-field col s12"><input type="text" name="reina" [(ngModel)]="frat.reina">  <label>Nombre de la Reina</label></div>
+        <div class="input-field col s12"><input type="text" name="descripcion"  [(ngModel)]="frat.descripcion">  <label>Descripcion </label></div>
+        
+   
+             
+                  <div class="form-group">
+                    <button class="waves-effect waves-light btn-small blue"  type="button" (click)="cancelar()">cancelar</button>
+                    <input class="waves-effect waves-light btn-small green"  type="submit" value="Enviar">
+                  </div>
+         
+ 
+    </form>
+</div>
+<a class="btn-floating btn-large waves-effect waves-light red"  (click)="nuevo()"><i class="material-icons">+</i></a>
+        
+  
+
+    <table [hidden]="!form" class="col s3">
+  
+        <tr *ngFor="let item of lista">
+                <a class=" right btn-floating  waves-effect  blue "  (click)="abrir()"><i class="material-icons">+</i></a><h1 class="header">{{item.nombre}}</h1>
+               
+        <br>
+         <h2>{{item.institucion}}</h2>
+
+  
+        
+        <br>
+        <td ngFor="let item of lista" [hidden]="!formu" >{{item.reina}} </td>
+       <div [hidden]="!formu"> Descripcion<td ngFor="let item of lista" >
+        Descripcion<div ngFor="let item of lista" >{{item.descripcion}}</div>
+<br>          Nombre del Presidente<div ngFor="let item of lista" >{{item.descripcion}}</div>
+   <br>           Nombre del Delegado<div ngFor="let item of lista" >{{item.delegado}}</div>
+      <br>         Nombre de la Reina<div ngFor="let item of lista" >{{item.reina}}    </div>      
+          <br>       Danza<div ngFor="let item of lista" >{{item.danza}}</div>
+              <br>        CAntidad de participantes<div ngFor="let item of lista" >{{item.cantidad}}</div>
+        </div>
+       
+        </tr>
+       
+    
+        </table>
+       
+    </div>
+  </body>

@@ -1,0 +1,28 @@
+<li><a class="waves-effect waves-light btn" routerLink="/api/Fraternidad" >Lista de Fraternidades</a></li>
+  <br>
+<div class="conteiner center">  </div>
+<div class="col s12 m8 offset-m2 l6 offset-l3">
+  <div class="card-panel grey lighten-5 z-depth-1">
+    <div class="row valign-wrapper">
+      <div class="col s8">
+        <div id="map" class="map"></div> <!-- notice the "circle" class -->
+      </div>
+      <div class="col s5">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  <p>
+    
+  <div [hidden]="!formuu">
+    <form (ngSubmit)="submit()">
+        <input placeholder="Comentario General" type="text" [(ngModel)]="ubi.comentario_general" name="comentario_general"> 
+        <input placeholder="Comentario de La Fraternidad" type="text" [(ngModel)]="ubi.comentario_fraternidad" name="comentario_fraternidad"> 
+ 
+ 
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+<button (click)="nuevo()">Agregrar Comentario</button>

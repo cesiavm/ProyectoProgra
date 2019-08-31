@@ -1,0 +1,77 @@
+<div  class="container"  >
+   <button class="btn waves-effect waves-light right" type="button" name="action"  (click)="close()">Iniciar Sesion</button>
+  <button class="btn waves-effect waves-light  right" type="button" name="action"  [hidden]="!bo" (click)="open()">Registrarse</button>
+   </div>
+ <body>
+   
+  <div class="container">
+    <div class="row" class="col s3">
+      <form class="col s5" (ngSubmit)="submit()" [hidden]="!formulario">
+        <div class="row">
+          <div class="input-field col s12">
+            <input  type="text"  [(ngModel)]="usu.login"  name="login">
+            <label>Nombre de usuario</label>
+          </div>
+        
+       
+        <div class="row" >
+          <div class="input-field col s12">
+            <input type="password" [(ngModel)]="usu.password"  name="password" >
+            <label >Password</label>
+          </div>
+        </div>
+        
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">
+          <i class="material-icons right">send</i>
+        </button>
+       
+     
+      </form>
+    </div>
+   
+  </div>
+  
+
+</body>
+        
+<div class="container">
+    <div class="row" class="col s3">
+      <form class="col s5" (ngSubmit)="submitregistrar()" [hidden]="!formuu">
+        <div class="row">
+          <div class="input-field col s12">
+            <input  type="text"  [(ngModel)]="usuario.nombre"  name="login">
+            <label>Nombre </label>
+          </div>
+          <div class="input-field col s12">
+              <input  type="text"  [(ngModel)]="usuario.Apellidos"  name="apellidos">
+              <label>Apellidos</label>
+            </div>
+            <div class="input-field col s12">
+                <input  type="text"  [(ngModel)]="usuario.login"  name="login">
+                <label>Nombre de usuario</label>
+              </div>
+       
+        <div class="row">
+          <div class="input-field col s12">
+            <input type="password" [(ngModel)]="usuario.password"  name="password" >
+            <label >Password</label>
+          </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+              <input type="password" name="password2" >
+              <label >confirmar Password</label>
+            </div>
+          </div>
+        
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" >
+          <i class="material-icons right">send</i>
+        </button>
+       
+     
+      </form>
+    </div>
+   
+  </div>

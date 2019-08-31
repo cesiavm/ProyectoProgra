@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+agm-map {
+    height: 300px;
+  }
+  .header {
+    color:#3f51b5;
+    font-weight: 300;
+}
+h1 {
+  font-size: 4.2rem;
+  line-height: 110%;
+  margin: 2.8rem 0 1.68rem 0;
+}
+h2 {
+  color:#3fb5a1;
+  font-size: 4.2rem;
+  line-height: 110%;
+  margin: 2.8rem 0 1.68rem 0;
+}
